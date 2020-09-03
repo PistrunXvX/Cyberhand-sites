@@ -80,7 +80,9 @@
 </main>
 
 <style lang="scss" >
-    @import './style/theme.scss`';
-
+    @import 'style/theme.scss';
+    p {
+        color: $colorWhite;
+    }
     
 </style>
