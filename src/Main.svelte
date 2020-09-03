@@ -35,24 +35,26 @@
             </div>
         </div>
     </section>
-    <article class="container">
+    <article class="container third__container">
         <div class="row">
             <div class="col">
                 <section class="ar_block">
                     <h2>Дополненная реалность уже в вашем телефоне</h2>
-                    <section class="ar_block_1">
+                    <section class="ar_block_1 ar">
                         <h3>Обьекты</h3>
                         <p>
                             Размещайте объекты, крутите, рассматривайт. 
                             Позвольте своим клиентам почувствовать всю мощь дополнительной реальности
                         </p>
+                        <button type="button" class="btn ar__button">Попробуйте Ar</button>
                     </section>
-                    <section class="ar_block_2">
+                    <section class="ar_block_2 ar">
                         <h3>Обьекты</h3>
                         <p>
                             Размещайте объекты, крутите, рассматривайт. 
                             Позвольте своим клиентам почувствовать всю мощь дополнительной реальности
                         </p>
+                        <button type="button" class="btn ar__button">Попробуйте Ar</button>
                     </section>
                 </section>
             </div>
@@ -83,6 +85,13 @@
     @import 'style/theme.scss';
     
     .container{
+        position: relative;
+        width: 100vw;
+        color: $colorWhite;
+        font-family: $opensans;
+    }
+    .first__container,
+    .second__container{
         color: $colorWhite;
         font-family: $opensans;
         padding: 0px;
@@ -134,7 +143,8 @@ margin-bottom: 20px;
     border-radius: 20px;
     width: 391px;
     height: 64px;
-    text-align: center;
+    display: flex;
+        justify-content: center;
     box-shadow: 0px 0px 10px $dark-orange;
     text-transform: uppercase;
     
@@ -154,7 +164,7 @@ margin-top: 190px;
 
 .second__container{
 
-margin-bottom: 240px;
+margin-bottom: 400px;
 }
 
 
@@ -174,6 +184,101 @@ width: 1200px;
 height: 190px;
 font-size: 33px;
 line-height: 115.3%;
+    }
+
+    
+      
+
+
+.ar_block{
+    padding: 0px;
+    margin: 0px;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+.ar_block_1{
+
+   
+}
+    
+    .ar_block h2{  
+        
+        position: absolute;
+        text-align: center;
+font-weight: 700;
+font-size: 96px;
+text-transform: uppercase;
+    }
+
+    
+
+    .ar{
+        width: 99vw;
+        height: 660px;  
+        background-image: url('/img/ar_block_1_img.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;  
+        background-position: center;
+        margin-top: 500px;
+        margin-bottom: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
     }
+
+    .ar h3{ 
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
+        text-transform: uppercase;
+font-weight: 700;
+font-size: 86px;
+color: $colorWhite;
+    }
+
+    .ar p{
+        width: 1365px;
+        display: flex;
+        height:150px;
+        align-content: center;
+font-weight: 700;
+font-size: 36px;
+margin-bottom: 100px;
+    }
+
+    .ar__button{
+        color: $colorWhite;
+        display: flex;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 48px;
+        width: 529px;
+        height: 100px;
+        border: 5px solid $colorWhite;
+        border-radius: 20px;
+       
+
+    }
+
+    .ar_block_1{
+        padding: 0px;
+        margin-bottom: -440px;
+
+    }
+    .ar_block_2{
+        width: 99vw;
+        height: 660px;  
+        background-image: url('/img/ar_block_2_img.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;  
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+
 </style>
