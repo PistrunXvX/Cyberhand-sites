@@ -2,13 +2,46 @@
 		import Header from './Header.svelte';
 		import Main from './Main.svelte';
 		import Footer from './Footer.svelte';
+		import { draw } from 'svelte/transition';
+		import { quintOut } from 'svelte/easing';
+		let condition = false;
+		setTimeout(() => condition = true)
 </script>
 
-<!-- <svelte:head>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-</svelte:head> -->
 <div class="container-fluid animation_block">
+	<div class="purple_line">
+		<svg>
+			{#if condition}
+			<path 
+				in:draw="{{delay: 400, duration: 2000, easing: quintOut}}"
+				d="M 0 0 L 5 140"
+				style="stroke: #700151; stroke-width: 5;" 
+			/>
+			<path 
+				in:draw="{{delay: 2200, duration: 2000, easing: quintOut}}"
+				d="M 5 140 L 138 100"
+				style="stroke: #700151; stroke-width: 5;" 
+			/>
+		{/if}
+		</svg>
+	</div>
+	<div class="logo"></div>
+	<div class="draw_line">
+		<svg>
+			{#if condition}
+			<path 
+				in:draw="{{delay: 1000, duration: 2000, easing: quintOut}}"
+				d="M 0 0 L 250 100"
+				style="stroke:#F2AE00; stroke-width: 5;" 
+			/>
+			<path
+				in:draw="{{delay: 3000, duration: 2000, easing: quintOut}}"
+				d="M 250 100 L 0 100"
+				style="stroke:#F2AE00; stroke-width: 5;" 
+			/>
+		{/if}
+		</svg>
+	</div>
 	<Header/>
 	<Main/>
 </div>
@@ -16,12 +49,41 @@
 
 
 <style lang="scss">
-	.animation_block{
+	.animation_block {
 		background-color: #1D002B;
-		background-image: 
-						url("/img/logo.svg"),
-						url("/img/line-purple-1.svg");
-		background-position: 50% 50%, 15% 0%;
+	}
+
+	.purple_line{
+		position: absolute;
+		left: 30%;
+	}
+
+	.logo{
+		position: absolute;
+		left: 10%;
+		width: 15%;
+		height: 20%;
+
+		background-image:url("/img/iconLogo.svg");
+		background-position: center;
 		background-repeat: no-repeat;
 	}
+
+	.draw_line{
+		position: absolute;
+		left: 1%;
+		top: 30%;
+	}
+
+	// .circle_bubble{
+	// 	position: absolute;
+	// 	top: 100%;
+	// 	right: 35%;
+	// 	width: 10%;
+	// 	height: 10%;
+
+	// 	background-position: center;
+	// 	background-repeat: no-repeat;
+	// 	animation: 3s ease-in-out 0.5s alternate infinite clipCircle;
+	// }
 </style>
