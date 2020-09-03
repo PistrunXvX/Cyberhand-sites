@@ -20,3 +20,10 @@
 	@import 'style/theme.scss';
 	
 	
+	.container-fluid{
+	background-color: purple;
+}
+
+
+</style> 
+

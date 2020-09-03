@@ -3,7 +3,7 @@
 </script>
 
 <main class="container-fluid">
-    <section class="container">
+    <section class="container first__container">
         <div class="row">
             <div class="col-8">
                 <div class="main_text">
@@ -12,7 +12,7 @@
                     <p>
                         Создаем интерфейсы аналитических систем, мобильные приложения и цифровые сервисы для государства и крупного бизнеса
                     </p>
-                    <button type="button" class="btn">Свяжитесь с нами</button>
+                    <button type="button" class="btn first__button">Свяжитесь с нами</button>
                 </div>
             </div>
             <div class="col-4 video_block">
@@ -20,7 +20,7 @@
             </div>
         </div>
     </section>
-    <section class="container">
+    <section class="container second__container">
         <div class="row">
             <div class="col">
                 <div class="about_text">
@@ -81,8 +81,99 @@
 
 <style lang="scss" >
     @import 'style/theme.scss';
-    p {
-        color: $colorWhite;
-    }
     
+    .container{
+        color: $colorWhite;
+        font-family: $opensans;
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+        margin-left:124px;
+    }
+
+    .first__container{
+        display: flex;
+        justify-content: center;
+       align-items: center;
+        margin-bottom: 240px;
+        flex-direction: row;
+        
+    }
+
+    .main_text{
+        position: relative;
+        margin-top: 300px;
+    }
+
+    .main_text h1{
+font-family: $neohe;
+font-size: 153px;
+text-transform: uppercase;
+width: 1105px;
+margin-bottom: -20px;
+
+    }
+    .main_text h3{
+font-weight: 700;
+font-size: 37px;
+margin-bottom: 20px;
+    }
+
+.main_text p {
+    font-size: 30px;
+    margin-bottom: 70px;
+    width: 719px;
+    height: 105px;
+}
+
+.first__button{
+    font-size: 31px;
+    font-weight: 700;
+    background-color: $dark-orange;
+    color: $colorWhite;
+    border-radius: 20px;
+    width: 391px;
+    height: 64px;
+    text-align: center;
+    box-shadow: 0px 0px 10px $dark-orange;
+    text-transform: uppercase;
+    
+    
+}
+
+.video_block{
+    position: absolute;
+margin-top: 190px;
+    border: 5px solid $colorWhite;
+    width: 700px;
+    height: 510px;
+    margin-left: 950px;
+    transform:skewX(-12DEG) skewY(-4DEG);
+    filter: blur(1px);
+}
+
+.second__container{
+
+margin-bottom: 240px;
+}
+
+
+.about_text h2{
+
+font-weight: 700;
+font-size: 115px;
+width: 705px;
+height: 199px;
+line-height: 92.8%;
+text-transform: uppercase;
+margin-bottom:50px;
+}
+
+    .about_text p{
+width: 1200px; 
+height: 190px;
+font-size: 33px;
+line-height: 115.3%;
+
+    }
 </style>
