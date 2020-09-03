@@ -79,7 +79,7 @@
     </div>
 </main>
 
-<style lang="scss" >
+<!-- <style lang="scss" >
     @import 'style/theme.scss';
     
     .container{
@@ -138,6 +138,7 @@ margin-bottom: 20px;
     box-shadow: 0px 0px 10px $dark-orange;
     text-transform: uppercase;
     
+<<<<<<< Updated upstream
     
 }
 
@@ -177,3 +178,6 @@ line-height: 115.3%;
 
     }
 </style>
+=======
+</style> -->
+>>>>>>> Stashed changes
