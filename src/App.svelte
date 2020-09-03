@@ -16,20 +16,12 @@
 
 
 <style lang="scss">
-<<<<<<< Updated upstream
-	@import 'style/theme.scss';
-	
-	
-	.container-fluid{
-	background-color: purple;
-}
-
-
-</style> 
-
-=======
 	.animation_block{
 		background-color: #1D002B;
+		background-image: 
+						url("/img/logo.svg"),
+						url("/img/line-purple-1.svg");
+		background-position: 50% 50%, 15% 0%;
+		background-repeat: no-repeat;
 	}
 </style>
->>>>>>> Stashed changes
