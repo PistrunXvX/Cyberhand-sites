@@ -3,12 +3,12 @@
 </script>
 
 <footer class="container-fluid">
-    <div class="container">
+    <div class="container footer_container">
         <div class="row justify-content-between">
             <div class="col-6">
                 <p><a href="mailto:contact@cyberhand.ru">contact@cyberhand.ru</a></p>
                 <p><a href="tel:+79999027464">+7 (999) 902-74-64</a></p>
-                <p>© CyberHand Web Studio 2020</p>
+                <p class="cybh">© CyberHand Web Studio 2020</p>
             </div>
             <div class="col-6 social_link">
                 <p>Cyber Hand</p>
@@ -22,4 +22,3 @@
         </div>
     </div>
 </footer>   
-div

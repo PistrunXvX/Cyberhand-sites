@@ -137,12 +137,14 @@ function dealWithScrolling(e) {
                     </p>
                 </div>
             </div>
-            <div class="col-6">
-                <form action="#">
+            <div class="col-6 ">
+                <div class="form">
+                <form action="#" class="form_input">
                     <input type="text" class="form-control" placeholder="Ваше имя" require>
                     <input type="email" class="form-control" placeholder="Ваш email" require>
-                    <button class="btn" type="submit">Отправить</button>
+                    <button class="btn form__btn" type="submit">Отправить</button>
                 </form>
+            </div>
             </div>
         </div>
     </div>
@@ -549,4 +551,94 @@ function dealWithScrolling(e) {
 //         margin-bottom: 60px;
 //     }
 
+
+    // .form__container{
+        
+    //     margin-left: 50px;
+
+    // }
+
+   
+
+    // .form_text{
+    // margin-bottom: 600px;
+   
+     
+
+    // }
+
+   
+    // .form_input{
+    //     margin-top: -50px;
+    //     border:10px solid $dark-orange;
+    //     width: 850px;
+    //     height: 400px;
+    // margin-left: 200px;
+    //    display: flex;
+    //    align-items: center;
+    //    justify-content: center;
+    //    flex-direction: column;
+
+//        background: rgb(195,34,143);
+// background: linear-gradient(0deg, rgba(195,34,143,1) 11%, rgba(241,253,45,1) 100%);
+
+    // }
+
+
+
+
+//     .form_text h2{
+
+
+// font-weight: 700;
+// font-size: 115px;
+// text-transform: uppercase;
+// line-height: 92.8%;
+
+//     }
+
+//     .form_text p{
+//         margin-top: 20px;
+//         font-size: 33px;
+// line-height: 115.3%;
+// width: 785px;
+
+//     }
+
+//     .form-control{
+//         width: 716px;
+//         height: 75px;
+//         margin-bottom: 35px;
+//         font-size: 33px;
+//         line-height: 115.3%;
+//        padding-left:35px;
+//     }
+
+
+// input::-webkit-input-placeholder {
+//    color: $colorDark ;   ;
+// }
+// input:-moz-placeholder { 
+//     color: $colorDark;
+// }
+// input::-moz-placeholder { 
+//     color: $colorDark;
+// }
+// input:-ms-input-placeholder {
+//     color: $colorDark;
+// }
+
+
+// .form__btn{
+//     background-color: $dark-orange;
+//     color: $colorWhite;
+//     width: 300px;
+//     height: 60px;
+//     font-size: 36px;
+//     font-weight: 700;
+//     text-transform: uppercase;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
 </style>
