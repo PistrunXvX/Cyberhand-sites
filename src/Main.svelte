@@ -1,8 +1,72 @@
 <script>
 
+    let coordX;
+    let coordY
+
+    function coordsCleint(e){
+        coordX = Math.round(e.offsetX);
+        coordY = Math.round(e.offsetY);
+        console.log(coordX);
+    };
+
+    // background-position: 80%, 50%; - about_1
+     // background-position: 50%, 20%; - about_2
+
+
+    $: style = `
+        background-position-x: calc(80% + (${coordY}%  / 100)), calc(50% + (${coordY}%  / 100));
+        background-position-y: calc(50% + (${coordX}% / 100)), calc(20% + (${coordY}%  / 100));
+  `;
+
+    let isScrolling = false;
+ 
+    window.addEventListener("scroll", throttleScroll, false);
+    
+    function throttleScroll(e) {
+        if (isScrolling == false ) {
+            window.requestAnimationFrame(function() {
+            scrolling(e);
+            isScrolling = false;
+            });
+        }
+        isScrolling = true;
+    };
+
+    document.addEventListener("DOMContentLoaded", scrolling, false);
+
+    let secondBox = document.querySelector("#animation__container");
+
+    function scrolling(e){
+        if (isPartiallyVisible(secondBox)) {
+        secondBox.classList.add("active");
+      }
+    };
+
+    function isPartiallyVisible(el) {
+      let elementBoundary = el.getBoundingClientRect();
+ 
+      let top = elementBoundary.top;
+      let bottom = elementBoundary.bottom;
+      let height = elementBoundary.height;
+ 
+      return ((top + height >= 0) && (height + window.innerHeight >= bottom));
+    };
+ 
+    function isFullyVisible(el) {
+      let elementBoundary = el.getBoundingClientRect();
+ 
+      let top = elementBoundary.top;
+      let bottom = elementBoundary.bottom;
+ 
+      return ((top >= 0) && (bottom <= window.innerHeight));
+    };
+ 
+function dealWithScrolling(e) {
+    // do epic stuff    
+}
 </script>
 
-<main class="container-fluid">
+<main class="container">
     <section class="container first__container">
         <div class="row">
             <div class="col-8">
@@ -20,16 +84,16 @@
             </div>
         </div>
     </section>
-    <section class="container second__container">
+    <section class="container second__container" id="animation__container" on:mousemove={coordsCleint} {style}>
         <div class="row">
             <div class="col">
                 <div class="about_text">
-                    <h2>О нашей студии</h2>
+                    <h2>О нашей <br> студии</h2>
                     <p>
-                        Мы - небольшая веб-студия и группа единомышленников. Специализируемся на разработке и дизайне сайтов. 
-                        В своих проектах мы используем технеологию дополненной реальности. 
-                        Это новый способ интерактивных развлечений, взаимодействия и общения с вашей аудиторией. 
-                        Попробуйте сами и убедитесь в этом!
+                        Мы - небольшая веб-студия и группа единомышленников. <br> Специализируемся на разработке и дизайне сайтов. 
+                        <br> В своих проектах мы используем технеологию дополненной реальности. 
+                        <br> Это новый способ интерактивных развлечений, взаимодействия и общения с вашей аудиторией. 
+                         Попробуйте сами и убедитесь в этом!
                     </p>
                 </div>
             </div>
@@ -41,30 +105,33 @@
                 <section class="ar_block">
                     <h2>Дополненная реалность уже в вашем телефоне</h2>
                     <section class="ar_block_1 ar">
-                        <h3>Обьекты</h3>
+                        <h3>3D обьекты</h3>
                         <p>
                             Размещайте объекты, крутите, рассматривайт. 
                             Позвольте своим клиентам почувствовать всю мощь дополнительной реальности
                         </p>
-                        <button type="button" class="btn ar__button">Попробуйте Ar</button>
+                        <div class="button_ar">
+                            <a href="#" class="btn ar__button" >Попробуйте Ar</a>
+                        </div>
                     </section>
                     <section class="ar_block_2 ar">
-                        <h3>Обьекты</h3>
+                        <h3>Взаимодействуйте</h3>
                         <p>
-                            Размещайте объекты, крутите, рассматривайт. 
-                            Позвольте своим клиентам почувствовать всю мощь дополнительной реальности
+                            С помощью маркеров вы получите возможность по новому взглянуть на способ взаимодействия с вашей информацией
                         </p>
-                        <button type="button" class="btn ar__button">Попробуйте Ar</button>
+                        <div class="button_ar">
+                            <button type="button" class="btn ar__button">Попробуйте Ar</button>
+                        </div>
                     </section>
                 </section>
             </div>
         </div>
     </article>
-    <div class="container">
+    <div class="container four__container">
         <div class="row">
             <div class="col-6">
                 <div class="form_text">
-                    <h2>Свяжитесь с нами</h2>
+                    <h2>Свяжитесь<br> с нами</h2>
                     <p>
                         Мы дадим вам обратную связь в течении дня
                     </p>
@@ -83,202 +150,403 @@
 
 <style lang="scss" >
     @import 'style/theme.scss';
-    
-    .container{
-        position: relative;
-        width: 100vw;
-        color: $colorWhite;
-        font-family: $opensans;
-    }
-    .first__container,
-    .second__container{
-        color: $colorWhite;
-        font-family: $opensans;
-        padding: 0px;
-        margin: 0px;
-        display: flex;
-        margin-left:124px;
+
+    .main_text{
+
+        h1{
+            font-family: $neohe;
+            font-size: 120px;
+            color: $colorWhite;
+
+            text-transform: uppercase;
+
+        }
+
+        h3{
+            font-family: $opensans;
+            font-size: 37px;
+            color: $colorWhite;
+        }
+        p{
+            font-family: $opensans;
+            font-size: 30px;
+            color: $colorWhite;
+
+            line-height: 115.3%;
+        }
     }
 
     .first__container{
-        display: flex;
-        justify-content: center;
-       align-items: center;
-        margin-bottom: 240px;
-        flex-direction: row;
+        margin-top: 15%;
+
+        animation: 1s ease-in 0s 1 alternate opacity;
+
+        .first__button{
+            font-family: $opensans;
+            font-size: 30px;
+            color: $colorWhite;
+
+            background: $colorYellow;
+            border-radius: 20px;
+            transition: background 0.5s, box-shadow 0.5s;
+
+            padding: 1% 5%;
+            margin-top: 3%;
+
+            box-shadow: 0px 0px 10px #F2AE00;
+        }
+
+        .first__button:hover{
+            background: #1D002B;
+            box-shadow: 0px 0px 10px $colorWhite;
+        }
+    }
+
+    .second__container{
+        margin-top: 15%;
+
+        background-image: url("/img/about_1.png"),
+                          url("/img/about_2.png");
+        background-size: 300px, 300px;
+        background-repeat: no-repeat, no-repeat;
+        background-position: 80%, 50%, 50%, 20%;
+    }
+
+    .about_text{
+
+        h2{
+            font-family: $opensans;
+            font-size: 115px;
+            color: $colorWhite;
+            font-weight: bold;
+
+            text-transform: uppercase;
+        }
+
+        p{
+            font-family: $opensans;
+            font-size: 30px;
+            color: $colorWhite;
+
+            line-height: 115.3%;
+        }
+    }
+
+    .active{
+        animation: 1s ease-in 0s 1 alternate opacity;
+    }
+
+    .third__container{
+        margin-top: 15%;
+    }
+
+    .ar_block{
+
+        h3{
+                font-family: $opensans;
+                font-size: 80px;
+                color: $colorWhite;
+                font-weight: bold;
+
+                text-transform: uppercase;
+                text-align: center;
+
+                padding-top: 10%;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
+            }
+
+            p{
+                font-family: $opensans;
+                font-size: 36px;
+                color: $colorWhite;
+                font-weight: bold;
+
+                text-align: center;
+                line-height: 103.3%;
+
+                padding-bottom: 5%;
+            }
+
+        h2{
+            font-family: $opensans;
+            font-size: 80px;
+            color: $colorWhite;
+            font-weight: bold;
+
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .ar_block_1{
+            background-image: url("/img/ar_block_1_img.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+            margin-bottom: 5%;
+        }
+
+        .ar_block_2{
+            background-image: url("/img/ar_block_2_img.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;          
+        }
+    }   
+
+    .button_ar{
+        text-align: center;
+
+        padding-bottom: 5%;
+    }
+
+    .ar__button{
+            font-family: $opensans;
+            font-size: 36px;
+            color: $colorWhite;
+            font-weight: bold;
+
+            background-color: none;
+            border-color: white;
+            border-width: 3px;
+            border-radius: 20px;
+            color: white;
+
+            padding-right: 5%;
+            padding-left: 5%;
+        }
+
+    .ar__button:hover{
+        color: black;
+        background-color: $colorWhite;
+        border-color: black;
+    }
+
+    .four__container{
+        padding-top: 15%;
+    }
+
+    .form_text{
         
+        h2{
+            font-family: $opensans;
+            font-size: 70px;
+            color: $colorWhite;
+
+            text-transform: uppercase;
+            line-height: 92.8%;
+        }
+
+        p{
+            font-family: $opensans;
+            font-size: 18px;
+            color: $colorWhite;
+        }
     }
 
-    .main_text{
-        position: relative;
-        margin-top: 300px;
+    @keyframes opacity{
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
     }
 
-    .main_text h1{
-font-family: $neohe;
-font-size: 153px;
-text-transform: uppercase;
-width: 1105px;
-margin-bottom: -20px;
+    
+//     .container{
+//         position: relative;
+//         width: 100vw;
+//         color: $colorWhite;
+//         font-family: $opensans;
+//     }
+//     .first__container,
+//     .second__container{
+//         color: $colorWhite;
+//         font-family: $opensans;
+//         padding: 0px;
+//         margin: 0px;
+//         display: flex;
+//         margin-left:124px;
+//     }
 
-    }
-    .main_text h3{
-font-weight: 700;
-font-size: 37px;
-margin-bottom: 20px;
-    }
+//     .first__container{
+//         display: flex;
+//         justify-content: center;
+//        align-items: center;
+//         margin-bottom: 240px;
+//         flex-direction: row;
+        
+//     }
 
-.main_text p {
-    font-size: 30px;
-    margin-bottom: 70px;
-    width: 719px;
-    height: 105px;
-}
+//     .main_text{
+//         position: relative;
+//         margin-top: 300px;
+//     }
 
-.first__button{
-    font-size: 31px;
-    font-weight: 700;
-    background-color: $dark-orange;
-    color: $colorWhite;
-    border-radius: 20px;
-    width: 391px;
-    height: 64px;
-    display: flex;
-        justify-content: center;
-    box-shadow: 0px 0px 10px $dark-orange;
-    text-transform: uppercase;
+//     .main_text h1{
+// font-family: $neohe;
+// font-size: 153px;
+// text-transform: uppercase;
+// width: 1105px;
+// margin-bottom: -20px;
+
+//     }
+//     .main_text h3{
+// font-weight: 700;
+// font-size: 37px;
+// margin-bottom: 20px;
+//     }
+
+// .main_text p {
+//     font-size: 30px;
+//     margin-bottom: 70px;
+//     width: 719px;
+//     height: 105px;
+// }
+
+// .first__button{
+//     font-size: 31px;
+//     font-weight: 700;
+//     background-color: $dark-orange;
+//     color: $colorWhite;
+//     border-radius: 20px;
+//     width: 391px;
+//     height: 64px;
+//     display: flex;
+//         justify-content: center;
+//     box-shadow: 0px 0px 10px $dark-orange;
+//     text-transform: uppercase;
     
     
-}
+// }
 
-.video_block{
-    position: absolute;
-margin-top: 190px;
-    border: 5px solid $colorWhite;
-    width: 700px;
-    height: 510px;
-    margin-left: 950px;
-    transform:skewX(-12DEG) skewY(-4DEG);
-    filter: blur(1px);
-}
+// .video_block{
+//     position: absolute;
+// margin-top: 190px;
+//     border: 5px solid $colorWhite;
+//     width: 700px;
+//     height: 510px;
+//     margin-left: 950px;
+//     transform:skewX(-12DEG) skewY(-4DEG);
+//     filter: blur(1px);
+// }
 
-.second__container{
+// .second__container{
 
-margin-bottom: 400px;
-}
+// margin-bottom: 400px;
+// }
 
 
-.about_text h2{
+// .about_text h2{
 
-font-weight: 700;
-font-size: 115px;
-width: 705px;
-height: 199px;
-line-height: 92.8%;
-text-transform: uppercase;
-margin-bottom:50px;
-}
+// font-weight: 700;
+// font-size: 115px;
+// width: 705px;
+// height: 199px;
+// line-height: 92.8%;
+// text-transform: uppercase;
+// margin-bottom:50px;
+// }
 
-    .about_text p{
-width: 1200px; 
-height: 190px;
-font-size: 33px;
-line-height: 115.3%;
-    }
+//     .about_text p{
+// width: 1200px; 
+// height: 190px;
+// font-size: 33px;
+// line-height: 115.3%;
+//     }
 
     
       
 
 
-.ar_block{
-    padding: 0px;
-    margin: 0px;
-display: flex;
-flex-direction: column;
-align-items: center;
+// .ar_block{
+//     padding: 0px;
+//     margin: 0px;
+// display: flex;
+// flex-direction: column;
+// align-items: center;
 
-}
-.ar_block_1{
+// }
+// .ar_block_1{
 
    
-}
+// }
     
-    .ar_block h2{  
+//     .ar_block h2{  
         
-        position: absolute;
-        text-align: center;
-font-weight: 700;
-font-size: 96px;
-text-transform: uppercase;
-    }
+//         position: absolute;
+//         text-align: center;
+// font-weight: 700;
+// font-size: 96px;
+// text-transform: uppercase;
+//     }
 
     
 
-    .ar{
-        width: 99vw;
-        height: 660px;  
-        background-image: url('/img/ar_block_1_img.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;  
-        background-position: center;
-        margin-top: 500px;
-        margin-bottom: 200px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+//     .ar{
+//         width: 99vw;
+//         height: 660px;  
+//         background-image: url('/img/ar_block_1_img.jpg');
+//         background-size: cover;
+//         background-repeat: no-repeat;  
+//         background-position: center;
+//         margin-top: 500px;
+//         margin-bottom: 200px;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
 
-    }
+//     }
 
-    .ar h3{ 
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
-        text-transform: uppercase;
-font-weight: 700;
-font-size: 86px;
-color: $colorWhite;
-    }
+//     .ar h3{ 
+//         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
+//         text-transform: uppercase;
+// font-weight: 700;
+// font-size: 86px;
+// color: $colorWhite;
+//     }
 
-    .ar p{
-        width: 1365px;
-        display: flex;
-        height:150px;
-        align-content: center;
-font-weight: 700;
-font-size: 36px;
-margin-bottom: 100px;
-    }
+//     .ar p{
+//         width: 1365px;
+//         display: flex;
+//         height:150px;
+//         align-content: center;
+// font-weight: 700;
+// font-size: 36px;
+// margin-bottom: 100px;
+//     }
 
-    .ar__button{
-        color: $colorWhite;
-        display: flex;
-        justify-content: center;
-        font-weight: 700;
-        font-size: 48px;
-        width: 529px;
-        height: 100px;
-        border: 5px solid $colorWhite;
-        border-radius: 20px;
+//     .ar__button{
+//         color: $colorWhite;
+//         display: flex;
+//         justify-content: center;
+//         font-weight: 700;
+//         font-size: 48px;
+//         width: 529px;
+//         height: 100px;
+//         border: 5px solid $colorWhite;
+//         border-radius: 20px;
        
 
-    }
+//     }
 
-    .ar_block_1{
-        padding: 0px;
-        margin-bottom: -440px;
+//     .ar_block_1{
+//         padding: 0px;
+//         margin-bottom: -440px;
 
-    }
-    .ar_block_2{
-        width: 99vw;
-        height: 660px;  
-        background-image: url('/img/ar_block_2_img.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;  
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 60px;
-    }
+//     }
+//     .ar_block_2{
+//         width: 99vw;
+//         height: 660px;  
+//         background-image: url('/img/ar_block_2_img.jpg');
+//         background-size: cover;
+//         background-repeat: no-repeat;  
+//         background-position: center;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+//         margin-bottom: 60px;
+//     }
 
 </style>

@@ -25,13 +25,24 @@
 		{/if}
 		</svg>
 	</div>
-	<div class="logo"></div>
 	<div class="draw_line">
 		<svg>
 			{#if condition}
 			<path 
 				in:draw="{{delay: 1000, duration: 2000, easing: quintOut}}"
 				d="M 0 0 L 250 100"
+				style="stroke:#F2AE00; stroke-width: 5;" 
+			/>
+		{/if}
+		</svg>
+	</div>
+	<Header/>
+	<div class="draw_line__2">
+		<svg>
+			{#if condition}
+			<path 
+				in:draw="{{delay: 1000, duration: 2000, easing: quintOut}}"
+				d="M 1 1 L 250 100"
 				style="stroke:#F2AE00; stroke-width: 5;" 
 			/>
 			<path
@@ -42,7 +53,6 @@
 		{/if}
 		</svg>
 	</div>
-	<Header/>
 	<Main/>
 </div>
 <Footer/>
@@ -58,21 +68,16 @@
 		left: 30%;
 	}
 
-	.logo{
-		position: absolute;
-		left: 10%;
-		width: 15%;
-		height: 20%;
-
-		background-image:url("/img/iconLogo.svg");
-		background-position: center;
-		background-repeat: no-repeat;
-	}
-
 	.draw_line{
 		position: absolute;
 		left: 1%;
 		top: 30%;
+	}
+
+	.draw_line__2{
+		position: absolute;
+		right: 1%;
+		top: 100%;
 	}
 
 	// .circle_bubble{
