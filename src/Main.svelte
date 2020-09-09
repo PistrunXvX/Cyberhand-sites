@@ -137,7 +137,7 @@ function dealWithScrolling(e) {
                     </p>
                 </div>
             </div>
-            <div class="col-6 ">
+            <div class="col-6">
                 <div class="form">
                 <form action="#" class="form_input">
                     <input type="text" class="form-control" placeholder="Ваше имя" require>
@@ -240,6 +240,7 @@ function dealWithScrolling(e) {
 
     .third__container{
         margin-top: 15%;
+        
     }
 
     .ar_block{
@@ -296,7 +297,6 @@ function dealWithScrolling(e) {
 
     .button_ar{
         text-align: center;
-
         padding-bottom: 5%;
     }
 
@@ -323,16 +323,19 @@ function dealWithScrolling(e) {
     }
 
     .four__container{
-        padding-top: 15%;
+        padding-bottom: 25%;
+        margin-top: 20%;
     }
 
     .form_text{
+
+    margin-top: 10%;
         
         h2{
             font-family: $opensans;
-            font-size: 70px;
+            font-size: 95px;
             color: $colorWhite;
-
+            font-weight: 700;
             text-transform: uppercase;
             line-height: 92.8%;
         }
@@ -343,6 +346,67 @@ function dealWithScrolling(e) {
             color: $colorWhite;
         }
     }
+
+    
+
+.form{
+    padding: 6%;
+    border: 8px solid transparent;
+    border-image: linear-gradient(to right, #c3228f 0%, #eeec35 100%); 
+    border-image-slice: 1; 
+    
+}
+
+.form-control{
+    font-size: 27px;
+    padding: 3% 6%;
+    margin-bottom: 5%;
+    line-height: 115.3%;
+    font-family: $opensans;
+    border:none;
+    border:bottom 1px solid #757575;
+    transition: background-color 0.2s ease-in;
+}
+
+.form-control:focus{
+    transition: background-color 0.2s ease-in;
+   background-color: #fff3c9;
+}
+.form__btn{
+    background-color: $dark-orange;
+    color: $colorWhite;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 1% 10%;
+    margin-left: 22%;
+    margin-top: 3%;
+    transition: all 0.4s ease-out;
+    
+}
+
+.form__btn:hover{
+    transition: all 0.4s ease-out;
+    background: none;
+    border-radius:5px;
+box-shadow: 0px 5px  65px #c3238f;
+}
+
+input::-webkit-input-placeholder {
+   color: $darkColor;   ;
+}
+input:-moz-placeholder { 
+    color:$darkColor;
+}
+input::-moz-placeholder { 
+    color:$darkColor;
+}
+input:-ms-input-placeholder {
+    color:$darkColor;
+}
+
+
+
 
     @keyframes opacity{
         from{

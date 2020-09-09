@@ -4,13 +4,13 @@
 
 <footer class="container-fluid">
     <div class="container footer_container">
-        <div class="row justify-content-between">
-            <div class="col-6">
+        <div class="row justify-content-between footer_all-content">
+            <div class="col-8 footer-left_block">
                 <p><a href="mailto:contact@cyberhand.ru">contact@cyberhand.ru</a></p>
                 <p><a href="tel:+79999027464">+7 (999) 902-74-64</a></p>
-                <p class="cybh">© CyberHand Web Studio 2020</p>
+                <p>© CyberHand Web Studio 2020</p>
             </div>
-            <div class="col-6 social_link">
+            <div class="col-4 social_link">
                 <p>Cyber Hand</p>
                 <ul>
                     <li><a href="#">Tg</a></li>
@@ -22,3 +22,97 @@
         </div>
     </div>
 </footer>   
+<style lang="scss" >
+@import 'style/theme.scss';
+
+.container-fluid{
+   padding-top: 3%;
+background-color: $colorYellow;
+font-family: $opensans;
+font-weight: 700;
+
+}
+
+.container{
+
+}
+
+
+.footer_all-content{
+    
+
+    p,
+    a,
+    li{
+color:$colorWhite;
+text-transform: uppercase;
+text-decoration: none;
+list-style: none;
+
+    }
+
+    a:hover{
+        transition: color 0.2s ease-in-out;
+        color: $darkColor;
+    }
+
+}
+
+.footer-left_block{
+
+    a{
+        line-height: 92.8%;
+        transition: color 0.2s ease-in-out;
+    }
+
+    p:first-child a{
+        font-size: 46px;
+    }
+
+    p:first-child::after{
+        margin-top: 2%;
+        display: block;
+        content: '';
+        width: 45%;
+        height: 2px;
+        background-color: $colorWhite;
+    }
+
+    p:nth-of-type(2) a{
+        font-size: 43px;
+    }
+    p:last-child {
+        margin-top:6%;
+        text-transform: none;
+        font-size: 42px;
+    }
+}
+
+.social_link{
+    
+    a{
+        transition: color 0.2s ease-in-out;
+    }
+    p{
+        font-size: 65px;
+        line-height: 115.3%;
+        justify-content: center;
+        margin-bottom: 10%;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0px;
+        padding: 0px;
+    }
+     
+    li:not(:last-child){
+        margin-right: 5%;
+    }
+}
+
+
+
+</style>
