@@ -13,10 +13,10 @@
             <div class="col-4 social_link">
                 <p>Cyber Hand</p>
                 <ul>
-                    <li><a href="#">Tg</a></li>
-                    <li><a href="#">Vk</a></li>
-                    <li><a href="#">In</a></li>
-                    <li><a href="#">Fb</a></li>
+                    <li class="tg"><a href="#">Tg</a></li>
+                    <li class="vk"><a href="#">Vk</a></li>
+                    <li class="in"><a href="#">In</a></li>
+                    <li class="fb"><a href="#">Fb</a></li>
                 </ul>
             </div>
         </div>
@@ -107,9 +107,24 @@ list-style: none;
         margin: 0px;
         padding: 0px;
     }
+
+    // li{
+    //     padding: 5%;
+    // }
      
     li:not(:last-child){
         margin-right: 5%;
+    }
+
+    .tg a{
+        background-image: url("/img/soc-icon-teleg.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        padding-top: 5%;
+        font-size: 25px;
+        color: rgba(0,0,0,0);
     }
 }
 
