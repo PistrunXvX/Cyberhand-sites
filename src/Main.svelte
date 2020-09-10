@@ -66,7 +66,7 @@ function dealWithScrolling(e) {
 }
 </script>
 
-<main class="container">
+<main>
     <section class="container first__container">
         <div class="row">
             <div class="col-8">
@@ -99,7 +99,7 @@ function dealWithScrolling(e) {
             </div>
         </div>
     </section>
-    <article class="container third__container">
+    <article class=" third__container container-fluid">
         <div class="row">
             <div class="col">
                 <section class="ar_block">

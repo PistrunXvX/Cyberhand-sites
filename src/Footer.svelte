@@ -10,13 +10,13 @@
                 <p><a href="tel:+79999027464">+7 (999) 902-74-64</a></p>
                 <p>© CyberHand Web Studio 2020</p>
             </div>
-            <div class="col-4 social_link">
+            <div class="col-4 social_link  justify-content-center">
                 <p>Cyber Hand</p>
                 <ul>
-                    <li class="tg"><a href="#">Tg</a></li>
-                    <li class="vk"><a href="#">Vk</a></li>
-                    <li class="in"><a href="#">In</a></li>
-                    <li class="fb"><a href="#">Fb</a></li>
+                    <li><a href="#">Tg</a></li>
+                    <li><a href="#">Vk</a></li>
+                    <li><a href="#">In</a></li>
+                    <li><a href="#">Fb</a></li>
                 </ul>
             </div>
         </div>
@@ -33,9 +33,7 @@ font-weight: 700;
 
 }
 
-.container{
 
-}
 
 
 .footer_all-content{
@@ -51,18 +49,23 @@ list-style: none;
 
     }
 
-    a:hover{
-        transition: color 0.2s ease-in-out;
-        color: $darkColor;
-    }
+
 
 }
 
 .footer-left_block{
 
     a{
+        
         line-height: 92.8%;
-        transition: color 0.2s ease-in-out;
+        transition: color 0.4s ease-in-out;
+
+    }
+
+    a:hover{
+        transition: color 0.4s ease-out;
+    color: $darkColor;
+
     }
 
     p:first-child a{
@@ -89,43 +92,77 @@ list-style: none;
 }
 
 .social_link{
-    
     a{
         transition: color 0.2s ease-in-out;
     }
     p{
-        font-size: 65px;
+        
+        font-size: 52px;
         line-height: 115.3%;
-        justify-content: center;
-        margin-bottom: 10%;
+        padding-left: 7.5%;
+        margin-bottom: 11%;
+       
     }
 
     ul{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         margin: 0px;
         padding: 0px;
-    }
+        margin-right: 5%;
 
-    // li{
-    //     padding: 5%;
-    // }
+    }
      
     li:not(:last-child){
-        margin-right: 5%;
+        margin-right: 20%;
     }
 
-    .tg a{
-        background-image: url("/img/soc-icon-teleg.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
+     li a {
 
-        padding-top: 5%;
+        padding: 55%;
         font-size: 25px;
-        color: rgba(0,0,0,0);
-    }
+        color: rgba(255, 255, 255, 0);
+     }
+
+     li:nth-of-type(1) a{
+      
+        background-image: url("/img/soc-icon-teleg.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: filter 0.5s ease-linear;
+     }
+     li:hover a{
+        transition: filter 0.5s ease-linear;
+        filter: opacity(65%);
+     }
+     li:nth-of-type(2) a{
+      
+      background-image: url("/img/soc-icon-vk.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      transition: filter 0.5s ease-linear;
+   }
+
+   li:nth-of-type(3) a{
+      
+      background-image: url("/img/soc-icon-inst.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      transition: filter 0.5s ease-linear;
+      padding: 85%;
+   }
+
+   li:nth-of-type(4) a{
+      
+      background-image: url("/img/soc-icon-fb.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      transition: filter 0.5s ease-linear;
+   }
 }
 
 
