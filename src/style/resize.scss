@@ -1,6 +1,6 @@
 @import "theme.scss";
 
-@media screen and (max-width: $md){
+@media screen and (max-width: $sm){
   h1{
     font-size: $fontMdH1 !important;
   }
@@ -22,7 +22,7 @@
   }
 }
 
-@media screen and (max-width: $sm){
+@media screen and (max-width: $xs){
   h1{
     font-size: $fontSmH1 !important;
   }
