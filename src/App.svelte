@@ -99,18 +99,28 @@
 	import About from "./Components/About.svelte";
 	import Portfolio from "./Components/Portfolio.svelte";
 	import Prices from "./Components/Prices.svelte";
+	import Header from './Components/Header.svelte';
+    import Footer from './Components/Footer.svelte';
 	export let url = "";
   </script>
 
 <Router url="{url}">
 	 <div>
-	   <Route path="about" component="{About}" /> 
-	   <Route path="portfolio" component="{Portfolio}" /> 
-	   <!--for now the router just support case sensitive,
-		   one workaround colud be add two time the route
-		   Example.
-		  <Route path="About" component="{About}" /> 
-	   -->
 	   <Route path="/"><Home /></Route>
+	   <Route path="/portfolio">
+			<Header />
+			<Portfolio />
+			<Footer />
+		</Route> 
+		<Route path="/about_us">
+			<Header />
+			<About />
+			<Footer />			
+	   </Route>
+	   <Route path="/price">
+			<Header />
+			<Prices />
+			<Footer />			
+   		</Route>
 	 </div>
    </Router>
