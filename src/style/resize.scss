@@ -1,0 +1,45 @@
+@import "theme.scss";
+
+@media screen and (max-width: $md){
+  h1{
+    font-size: $fontMdH1 !important;
+  }
+
+  h2{
+    font-size: $fontMdH2 !important;
+  }
+
+  h3{
+    font-size: $fontMdH3 !important;
+  }
+
+  p{
+      font-size: $fontMdP !important;
+  }
+
+  a{
+    font-size: $fontMdA !important;
+  }
+}
+
+@media screen and (max-width: $sm){
+  h1{
+    font-size: $fontSmH1 !important;
+  }
+
+  h2{
+    font-size: $fontSmH2 !important;
+  }
+
+  h3{
+    font-size: $fontSmH3 !important;
+  }
+
+  p{
+      font-size: $fontSmP !important;
+  }
+
+  a{
+    font-size: $fontSmP !important;
+  }
+}

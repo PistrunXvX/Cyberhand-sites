@@ -1,9 +1,37 @@
 
 $neohe:'Hammersmith One', sans-serif;
-$opensans: 'Open Sans', sans-serif;
+$opensans: 'Roboto', sans-serif;
 $securityFont: Arial;
 
 $colorWhite: #FFFF;
-$coloerYellow: #FFB700;
+$colorSemiWhite: #FDFDFD;
+$colorGray: #F8F8F8;
+$colorYellow: #FFB700;
 $dark-orange: #F2AE00;
-$colorDark: #1D002B;
+$darkColor: #1D002B;
+
+// sizeFont
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+
+
+// < 1140px
+$fontBigH1: 120px;
+$fontBigH2: 110px;
+$fontBigH3: 80px;
+$fontBigP: 30px;
+
+// > 768px
+$fontMdH1: 100px;
+$fontMdH2: 90px;
+$fontMdH3: 60px;
+$fontMdP: 20px;
+$fontMdA: 15px;
+
+// > 576px
+$fontSmH1: 80px;
+$fontSmH2: 70px;
+$fontSmH3: 40px;
+$fontSmP: 15px;
+$fontSmA: 13px;
