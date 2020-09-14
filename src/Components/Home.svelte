@@ -1,11 +1,11 @@
-<!-- <script>
-		import Header from './Header.svelte';
-		import Main from './Main.svelte';
-		import Footer from './Footer.svelte';
-		import { draw } from 'svelte/transition';
-		import { quintOut } from 'svelte/easing';
-		let condition = false;
-		setTimeout(() => condition = true);
+<script>
+    import Header from './Header.svelte';
+    import Main from './Main.svelte';
+    import Footer from './Footer.svelte';
+    import { draw } from 'svelte/transition';
+    import { quintOut } from 'svelte/easing';
+    let condition = false;
+    setTimeout(() => condition = true);
 </script>
 
 <div class="container-fluid animation_block">
@@ -79,38 +79,4 @@
 		right: 1%;
 		top: 100%;
 	}
-
-	// .circle_bubble{
-	// 	position: absolute;
-	// 	top: 100%;
-	// 	right: 35%;
-	// 	width: 10%;
-	// 	height: 10%;
-
-	// 	background-position: center;
-	// 	background-repeat: no-repeat;
-	// 	animation: 3s ease-in-out 0.5s alternate infinite clipCircle;
-	// }
-</style> -->
-
-<script>
-	import { Router, Route, Link } from "svelte-routing";
-	import Home from "./Components/Home.svelte";
-	import About from "./Components/About.svelte";
-	import Portfolio from "./Components/Portfolio.svelte";
-	import Prices from "./Components/Prices.svelte";
-	export let url = "";
-  </script>
-
-<Router url="{url}">
-	 <div>
-	   <Route path="about" component="{About}" /> 
-	   <Route path="portfolio" component="{Portfolio}" /> 
-	   <!--for now the router just support case sensitive,
-		   one workaround colud be add two time the route
-		   Example.
-		  <Route path="About" component="{About}" /> 
-	   -->
-	   <Route path="/"><Home /></Route>
-	 </div>
-   </Router>
+</style>

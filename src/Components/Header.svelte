@@ -1,25 +1,29 @@
+<script>
+    import { link } from "svelte-routing";
+</script>
+
 <header class="container-fluid">
     <div class="row">
         <div class="col logo">
             <nav>
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
-                        <a href="#">
+                        <a href="/" use:link>
                             Главная
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#">
+                        <a href="/portfolio" use:link portfolio>
                             Портфолио
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#">
+                        <a href="/about_us" use:link about_us>
                             О нас
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#">
+                        <a href="/price" use:link price>
                             Услуги
                         </a>
                     </li>
@@ -60,11 +64,6 @@
         a:focus:after {
             width: 100%;
         }
-            // a:hover,
-            // a:focus {
-            //     color: $colorGray;
-            // }
-
     }
     .logo{
         padding-top: 3%;
