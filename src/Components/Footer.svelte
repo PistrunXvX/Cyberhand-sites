@@ -2,15 +2,15 @@
 
 </script>
 
-<footer class="container-fluid">
-    <div class="container footer_container">
-        <div class="row justify-content-between footer_all-content">
-            <div class="col-8 footer-left_block">
+<footer class="container-fluid ">
+    <div class="footer_container text-center">
+        <div class="row  justify-content-between align-content-center  footer_all-content">
+            <div class="col-lg-6 col-sm-6 col-xs-12 footer-left_block">
                 <p><a href="mailto:contact@cyberhand.ru">contact@cyberhand.ru</a></p>
                 <p><a href="tel:+79999027464">+7 (999) 902-74-64</a></p>
                 <p>© CyberHand Web Studio 2020</p>
             </div>
-            <div class="col-4 social_link  justify-content-center">
+            <div class="col-lg-6 col-sm-6 col-xs-12  social_link ">
                 <p>Cyber Hand</p>
                 <ul>
                     <li><a href="#">Tg</a></li>
@@ -74,10 +74,11 @@ list-style: none;
     }
 
     p:first-child::after{
+        
         margin-top: 2%;
         display: block;
         content: '';
-        width: 45%;
+        width: 100%;
         height: 2px;
         background-color: $colorWhite;
     }
@@ -93,34 +94,36 @@ list-style: none;
 }
 
 .social_link{
+    
+    
     a{
         transition: color 0.2s ease-in-out;
     }
     p{
-
-        font-size: 52px;
+      
+        font-size: 96px;
         line-height: 115.3%;
         padding-left: 7.5%;
-        margin-bottom: 11%;
+        margin-bottom: 4%;
 
     }
 
     ul{
-        display: flex;
-        flex-direction: row;
-        margin: 0px;
-        padding: 0px;
-        margin-right: 5%;
+       
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+        
 
     }
 
     li:not(:last-child){
-        margin-right: 20%;
+        padding-right: 8%;
     }
 
      li a {
 
-        padding: 55%;
+       padding: 65%;
         font-size: 25px;
         color: rgba(255, 255, 255, 0);
      }
@@ -153,7 +156,9 @@ list-style: none;
       background-repeat: no-repeat;
       background-size: contain;
       transition: filter 0.5s ease-linear;
-      padding: 85%;
+      padding: 90%;
+      
+     
    }
 
    li:nth-of-type(4) a{

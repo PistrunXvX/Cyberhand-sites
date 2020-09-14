@@ -69,7 +69,7 @@ function dealWithScrolling(e) {
 <main>
     <section class="container first__container">
         <div class="row">
-            <div class="col-8">
+            <div class="col-lg-8">
                 <div class="main_text">
                     <h1>Cyber Hand</h1>
                     <h3>Ваш сайт - наша работа</h3>
@@ -86,7 +86,7 @@ function dealWithScrolling(e) {
     </section>
     <section class="container second__container" id="animation__container" on:mousemove={coordsCleint} {style}>
         <div class="row">
-            <div class="col">
+            <div class="col-lg-12">
                 <div class="about_text">
                     <h2>О нашей <br> студии</h2>
                     <p>
@@ -101,7 +101,7 @@ function dealWithScrolling(e) {
     </section>
     <article class=" third__container container-fluid">
         <div class="row">
-            <div class="col">
+            <div class="col-lg-12">
                 <section class="ar_block">
                     <h2>Дополненная реалность уже в вашем телефоне</h2>
                     <section class="ar_block_1 ar">
@@ -129,7 +129,7 @@ function dealWithScrolling(e) {
     </article>
     <div class="container four__container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-lg-6 col-sm-12 col-xs-12 ">
                 <div class="form_text">
                     <h2>Свяжитесь<br> с нами</h2>
                     <p>
@@ -137,12 +137,14 @@ function dealWithScrolling(e) {
                     </p>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-lg-6 col-sm-12m col-xs-12">
                 <div class="form">
                 <form action="#" class="form_input">
                     <input type="text" class="form-control" placeholder="Ваше имя" require>
                     <input type="email" class="form-control" placeholder="Ваш email" require>
+                    <div class="text-center">
                     <button class="btn form__btn" type="submit">Отправить</button>
+                    </div>
                 </form>
             </div>
             </div>
@@ -384,7 +386,6 @@ function dealWithScrolling(e) {
     font-size: $fontBigP;
     font-weight: 700;
     padding: 1% 10%;
-    margin-left: 22%;
     margin-top: 3%;
     transition: all 0.4s ease-out;
 

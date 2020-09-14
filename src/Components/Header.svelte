@@ -37,6 +37,10 @@
      @import 'style/theme.scss';
      @import 'style/resize.scss';
 
+     .container-fluid{
+         background-color: $darkColor;
+     }
+
     li{
         padding-right: 5%;
 
