@@ -50,8 +50,8 @@
             width: 85%;
             height: 2px;
             background-color: $dark-orange;
-            margin-top: 50px;   
-            
+            margin-top: 50px;
+
         }
 
     .nav > li > a{
@@ -60,11 +60,11 @@
    font-size: 36px;
     }
 
-    
+
     .nav li:not(:last-child) {
         margin-right: 70px;
     }
 
 
-   
+
  </style>

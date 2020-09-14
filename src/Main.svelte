@@ -26,9 +26,9 @@
                 <div class="about_text">
                     <h2>О нашей студии</h2>
                     <p>
-                        Мы - небольшая веб-студия и группа единомышленников. Специализируемся на разработке и дизайне сайтов. 
-                        В своих проектах мы используем технеологию дополненной реальности. 
-                        Это новый способ интерактивных развлечений, взаимодействия и общения с вашей аудиторией. 
+                        Мы - небольшая веб-студия и группа единомышленников. Специализируемся на разработке и дизайне сайтов.
+                        В своих проектах мы используем технеологию дополненной реальности.
+                        Это новый способ интерактивных развлечений, взаимодействия и общения с вашей аудиторией.
                         Попробуйте сами и убедитесь в этом!
                     </p>
                 </div>
@@ -43,7 +43,7 @@
                     <section class="ar_block_1 ar">
                         <h3>Обьекты</h3>
                         <p>
-                            Размещайте объекты, крутите, рассматривайт. 
+                            Размещайте объекты, крутите, рассматривайт.
                             Позвольте своим клиентам почувствовать всю мощь дополнительной реальности
                         </p>
                         <button type="button" class="btn ar__button">Попробуйте Ar</button>
@@ -51,7 +51,7 @@
                     <section class="ar_block_2 ar">
                         <h3>Обьекты</h3>
                         <p>
-                            Размещайте объекты, крутите, рассматривайт. 
+                            Размещайте объекты, крутите, рассматривайт.
                             Позвольте своим клиентам почувствовать всю мощь дополнительной реальности
                         </p>
                         <button type="button" class="btn ar__button">Попробуйте Ar</button>
@@ -85,10 +85,10 @@
 
 <style lang="scss" >
     @import 'style/theme.scss';
-    
+
     .container{
         position: relative;
-        width: 100%;
+        // width: 100%;
         color: $colorWhite;
         font-family: $opensans;
     }
@@ -108,7 +108,7 @@
        align-items: center;
         margin-bottom: 240px;
         flex-direction: row;
-        
+
     }
 
     .main_text{
@@ -120,7 +120,7 @@
 font-family: $neohe;
 font-size: 153px;
 text-transform: uppercase;
-width: 1105px;
+// width: 1105px;
 margin-bottom: -20px;
 
     }
@@ -133,8 +133,8 @@ margin-bottom: 20px;
 .main_text p {
     font-size: 30px;
     margin-bottom: 70px;
-    width: 719px;
-    height: 105px;
+    // width: 719px;
+    // height: 105px;
 }
 
 .first__button{
@@ -143,22 +143,22 @@ margin-bottom: 20px;
     background-color: $dark-orange;
     color: $colorWhite;
     border-radius: 20px;
-    width: 391px;
-    height: 64px;
+    // width: 391px;
+    // height: 64px;
     display: flex;
     justify-content: center;
     box-shadow: 0px 0px 10px $dark-orange;
     text-transform: uppercase;
-    
-    
+
+
 }
 
 .video_block{
     position: absolute;
 margin-top: 190px;
     border: 5px solid $colorWhite;
-    width: 700px;
-    height: 510px;
+    // width: 700px;
+    // height: 510px;
     margin-left: 950px;
     transform:skewX(-12DEG) skewY(-4DEG);
     filter: blur(1px);
@@ -174,22 +174,22 @@ margin-bottom: 400px;
 
 font-weight: 700;
 font-size: 115px;
-width: 705px;
-height: 199px;
+// width: 705px;
+// height: 199px;
 line-height: 92.8%;
 text-transform: uppercase;
 margin-bottom:50px;
 }
 
     .about_text p{
-width: 1200px; 
-height: 190px;
+// width: 1200px;
+// height: 190px;
 font-size: 33px;
 line-height: 115.3%;
     }
 
-    
-      
+
+
 
 
 .ar_block{
@@ -204,9 +204,9 @@ align-items: center;
 .third__container{
     margin-bottom: 250px;
 }
-    
-    .ar_block h2{  
-        
+
+    .ar_block h2{
+
     position: absolute;
 text-align: center;
 font-weight: 700;
@@ -214,14 +214,14 @@ font-size: 96px;
 text-transform: uppercase;
     }
 
-    
+
 
     .ar{
-        width: 99vw;
-        height: 660px;  
+        // width: 99vw;
+        // height: 660px;
         background-image: url('/img/ar_block_1_img.jpg');
         background-size: cover;
-        background-repeat: no-repeat;  
+        background-repeat: no-repeat;
         background-position: center;
         margin-top: 500px;
         margin-bottom: 200px;
@@ -232,7 +232,7 @@ text-transform: uppercase;
 
     }
 
-    .ar h3{ 
+    .ar h3{
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
         text-transform: uppercase;
 font-weight: 700;
@@ -242,9 +242,9 @@ color: $colorWhite;
     }
 
     .ar p{
-        width: 1365px;
+        // width: 1365px;
         display: flex;
-        height:150px;
+        // height:150px;
         align-content: center;
 font-weight: 700;
 font-size: 36px;
@@ -258,11 +258,11 @@ margin-bottom: 100px;
         justify-content: center;
         font-weight: 700;
         font-size: 48px;
-        width: 529px;
-        height: 100px;
+        // width: 529px;
+        // height: 100px;
         border: 5px solid $colorWhite;
         border-radius: 20px;
-       
+
 
     }
 
@@ -272,11 +272,11 @@ margin-bottom: 100px;
 
     }
     .ar_block_2{
-        width: 99vw;
-        height: 660px;  
+        // width: 99vw;
+        // height: 660px;
         background-image: url('/img/ar_block_2_img.jpg');
         background-size: cover;
-        background-repeat: no-repeat;  
+        background-repeat: no-repeat;
         background-position: center;
         display: flex;
         flex-direction: column;
@@ -287,26 +287,26 @@ margin-bottom: 100px;
 
 
     .form__container{
-        
+
         margin-left: 50px;
 
     }
 
-   
+
 
     .form_text{
     margin-bottom: 600px;
-   
-     
+
+
 
     }
 
-   
+
     .form_input{
         margin-top: -50px;
         border:10px solid $dark-orange;
-        width: 850px;
-        height: 400px;
+        // width: 850px;
+        // height: 400px;
     margin-left: 200px;
        display: flex;
        align-items: center;
@@ -335,13 +335,13 @@ line-height: 92.8%;
         margin-top: 20px;
         font-size: 33px;
 line-height: 115.3%;
-width: 785px;
+// width: 785px;
 
     }
 
     .form-control{
-        width: 716px;
-        height: 75px;
+        // width: 716px;
+        // height: 75px;
         margin-bottom: 35px;
         font-size: 33px;
         line-height: 115.3%;
@@ -352,10 +352,10 @@ width: 785px;
 input::-webkit-input-placeholder {
    color: $colorDark ;   ;
 }
-input:-moz-placeholder { 
+input:-moz-placeholder {
     color: $colorDark;
 }
-input::-moz-placeholder { 
+input::-moz-placeholder {
     color: $colorDark;
 }
 input:-ms-input-placeholder {
@@ -366,8 +366,8 @@ input:-ms-input-placeholder {
 .form__btn{
     background-color: $dark-orange;
     color: $colorWhite;
-    width: 300px;
-    height: 60px;
+    // width: 300px;
+    // height: 60px;
     font-size: 36px;
     font-weight: 700;
     text-transform: uppercase;
