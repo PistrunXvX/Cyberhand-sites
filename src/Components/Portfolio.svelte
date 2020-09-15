@@ -17,17 +17,16 @@
         </div>
         <div class="row">
             <div class="col">
-                <div class="accordion" id="accordionExample">
+                <div class="accordion first__lend" id="accordionExample">
+                  <h2>
+                    Путешествие в Австрию
+                  </h2>
+                  <p>
+                    Веб дизайн для тур фирмы.
+                  </p>
                     <div class="card">
                       <div class="card-header" id="headingOne">
-                          <h2>
-                            Путешествие в Австрию
-                          </h2>
-                          <p>
-                            Веб дизайн для тур фирмы.
-                          </p>
                           <button class="btn btn-link btn-block text-right float-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Подробнее
                           </button>
                       </div>
                   
@@ -41,13 +40,13 @@
                                 </ol>
                                 <div class="carousel-inner">
                                   <div class="carousel-item active">
-                                    <img src="/img/first_land_1.jpg" class="d-block w-100" alt="...">
+                                    <img src="/img/first_lend_1.jpg" class="d-block w-100" alt="...">
                                   </div>
                                   <div class="carousel-item">
-                                    <img src="/img/first_land_2.jpg" class="d-block w-100" alt="...">
+                                    <img src="/img/first_lend_2.jpg" class="d-block w-100" alt="...">
                                   </div>
                                   <div class="carousel-item">
-                                    <img src="/img/first_land_3.jpg" class="d-block w-100" alt="...">
+                                    <img src="/img/first_lend_3.jpg" class="d-block w-100" alt="...">
                                   </div>
                                 </div>
                                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -64,16 +63,15 @@
                     </div>
             </div>
             <div class="accordion second__lend" id="accordionExample">
+              <h2>
+                Квартирный вопрос
+             </h2>
+             <p>
+               Веб дизайн для сайта продаж квартир.
+             </p>
                 <div class="card">
                   <div class="card-header" id="headingOne">
-                      <h2>
-                         Квартирный вопрос
-                      </h2>
-                      <p>
-                        Веб дизайн для сайта продаж квартир.
-                      </p>
                       <button class="btn btn-link btn-block text-right float-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                        Подробнее
                       </button>
                   </div>
               
@@ -110,16 +108,15 @@
                 </div>
             </div>
             <div class="accordion three__lend" id="accordionExample">
+              <h2>
+                Кондитерская
+             </h2>
+             <p>
+               Веб дизайн для кондитерской.
+             </p>
                 <div class="card">
                   <div class="card-header" id="headingOne">
-                      <h2>
-                         Космическая одиссея
-                      </h2>
-                      <p>
-                        Веб дизайн для сайта организации праздников.
-                      </p>
                       <button class="btn btn-link btn-block text-right float-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                        Подробнее
                       </button>
                   </div>
               
@@ -156,16 +153,15 @@
                 </div>
             </div>
             <div class="accordion four__lend" id="accordionExample">
+              <h2>
+                Космическая одиссея
+             </h2>
+             <p>
+               Веб дизайн для сайта организации праздников.
+             </p>
                 <div class="card">
                   <div class="card-header" id="headingOne">
-                      <h2>
-                         Кондитерская
-                      </h2>
-                      <p>
-                        Веб дизайн для кондитерской.
-                      </p>
-                      <button class="btn btn-link btn-block text-right float-left" type="button" data-toggle="collapse" data-target="#collapseFoure" aria-expanded="true" aria-controls="collapseFoure">
-                        Подробнее
+                      <button class="btn  btn-block" type="button" data-toggle="collapse" data-target="#collapseFoure" aria-expanded="true" aria-controls="collapseFoure">
                       </button>
                   </div>
               
@@ -218,10 +214,39 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 50% 50%;
+        transition: padding 0.5s ease;
+    }
+
+    .card:hover{
+      padding: 5%;
     }
 
     .accordion{
         padding-top: 10%;
+
+        h2{
+            color: $colorWhite;
+            font-family: $opensans;
+            font-size: $fontBigH2;
+
+        }
+        p{
+            color: $colorWhite;
+            font-family: $opensans;
+            font-size: $fontBigP;
+        }
+
+        button{
+          padding-bottom: 10%;
+        }
+    }
+
+    .accordion:last-child{
+      margin-bottom: 10%;
+    }
+
+    .btn:focus{
+      text-shadow: none !important;
     }
 
     .portfolio__block{
@@ -230,22 +255,17 @@
 
         h1{
             color: $colorWhite;
+            font-family: $opensans;
+            font-size: $fontBigH1;
+            font-weight: bold;
         }
 
         p{
             color: $colorWhite;
+            font-family: $opensans;
+            font-size: $fontBigP;
         }
     } 
-
-    .card-header{
-
-        h2{
-            color: $colorWhite;
-        }
-        p{
-            color: $colorWhite;
-        }
-    }
 
     .first__lend .card{
         background-image: url("/img/first_lend_main.jpg");

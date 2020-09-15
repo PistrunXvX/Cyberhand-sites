@@ -7,7 +7,7 @@
 </div>
 
 <style>
-    @import "../style/theme.scss";
-    @import "../style/resize.scss";
+    @import "./src/style/theme.scss";
+    @import "./src/style/resize.scss";
 
 </style>
