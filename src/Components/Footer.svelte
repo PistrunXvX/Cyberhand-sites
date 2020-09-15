@@ -14,10 +14,10 @@
                 <p>Cyber Hand</p>
                 <div class="soc_item-list">
                 <ul>
-                    <li><a href="#">Tg</a></li>
-                    <li><a href="#">Vk</a></li>
-                    <li><a href="#">In</a></li>
-                    <li><a href="#">Fb</a></li>
+                    <li><a target="_blank" href="https://t.me/cyberhandev">Tg</a></li>
+                    <li><a target="_blank" href="https://vk.com/cyberhandweb">Vk</a></li>
+                    <li><a target="_blank" href="https://www.instagram.com/cyberhandweb">In</a></li>
+                    <li><a target="_blank" href="https://www.facebook.com/CyberHand/?ref=bookmarks">Fb</a></li>
                 </ul>
                 </div>
             </div>

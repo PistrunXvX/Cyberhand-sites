@@ -1,5 +1,9 @@
 <script>
     import Typewriter from 'svelte-typewriter';
+    import { draw } from 'svelte/transition';
+    import { quintOut } from 'svelte/easing';
+    let condition = false;
+    setTimeout(() => condition = true);
 
     let coordX;
     let coordY
@@ -9,10 +13,6 @@
         coordY = Math.round(e.offsetY);
         console.log(coordX);
     };
-
-    // background-position: 80%, 50%; - about_1
-     // background-position: 50%, 20%; - about_2
-
 
     $: style = `
         background-position-x: calc(80% + (${coordY}%  / 100)), calc(50% + (${coordY}%  / 100));
@@ -104,6 +104,28 @@ function dealWithScrolling(e) {
         </div>
     </section>
     <article class=" third__container container-fluid">
+        <div class="draw__line__3">
+            <svg>
+                {#if condition}
+                <path 
+                    in:draw="{{delay: 1000, duration: 2000, easing: quintOut}}"
+                    d="M 0 0 L 250 100"
+                    style="stroke:#F2AE00; stroke-width: 5;" 
+                />
+            {/if}
+            </svg>
+        </div>
+        <div class="draw__line__4">
+            <svg>
+                {#if condition}
+                <path 
+                    in:draw="{{delay: 1000, duration: 2000, easing: quintOut}}"
+                    d="M 0 0 L 250 100"
+                    style="stroke:#F2AE00; stroke-width: 5;" 
+                />
+            {/if}
+            </svg>
+        </div>
         <div class="row">
             <div class="col-lg-12">
                 <section class="ar_block">
@@ -247,7 +269,7 @@ function dealWithScrolling(e) {
 
     .third__container{
         margin-top: 15%;
-
+        position: relative;
     }
 
     .ar_block{
@@ -386,7 +408,6 @@ function dealWithScrolling(e) {
     background-color: $dark-orange;
     color: $colorWhite;
     text-transform: uppercase;
-    // font-size: 30px;
     font-size: $fontBigP;
     font-weight: 700;
     padding: 1% 10%;
@@ -414,6 +435,17 @@ input::-moz-placeholder {
 input:-ms-input-placeholder {
     color:$darkColor;
 }
+
+.draw__line__3{
+		position: absolute;
+		top: 0;
+    }
+    
+    .draw__line__4{
+		position: absolute;
+        top: 5%;
+	}
+
 
 
 
