@@ -79,7 +79,7 @@ function dealWithScrolling(e) {
                     <button type="button" class="btn first__button">Свяжитесь с нами</button>
                 </div>
             </div>
-            <div class="col-4 video_block">
+            <div class="col-lg-4 video_block">
                 <video src="#"></video>
             </div>
         </div>

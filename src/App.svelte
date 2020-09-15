@@ -100,7 +100,8 @@
 	import Portfolio from "./Components/Portfolio.svelte";
 	import Prices from "./Components/Prices.svelte";
 	import Header from './Components/Header.svelte';
-    import Footer from './Components/Footer.svelte';
+	import Footer from './Components/Footer.svelte';
+	import Form from './Components/Form.svelte';
 	export let url = "";
   </script>
 
@@ -110,6 +111,7 @@
 	   <Route path="/portfolio">
 			<Header />
 			<Portfolio />
+			<Form />
 			<Footer />
 		</Route> 
 		<Route path="/about_us">
