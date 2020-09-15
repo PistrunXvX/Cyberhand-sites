@@ -1,4 +1,5 @@
 <script>
+    import Typewriter from 'svelte-typewriter';
 
     let coordX;
     let coordY
@@ -71,11 +72,14 @@ function dealWithScrolling(e) {
         <div class="row">
             <div class="col-lg-8">
                 <div class="main_text">
+                   
                     <h1>Cyber Hand</h1>
+                    <Typewriter cascade interval={50}>
                     <h3>Ваш сайт - наша работа</h3>
                     <p>
                         Создаем интерфейсы аналитических систем, мобильные приложения и цифровые сервисы для государства и крупного бизнеса
                     </p>
+                    </Typewriter>
                     <button type="button" class="btn first__button">Свяжитесь с нами</button>
                 </div>
             </div>
