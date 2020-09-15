@@ -67,7 +67,6 @@
 		position: absolute;
 		left: 30%;
 	}
-
 	.draw_line{
 		position: absolute;
 		left: 1%;
