@@ -5,19 +5,21 @@
 <footer class="container-fluid ">
     <div class="footer_container text-center">
         <div class="row  justify-content-between align-content-center  footer_all-content">
-            <div class="col-lg-6 col-sm-6 col-xs-12 footer-left_block">
+            <div class="col-md-12  col-lg-6 col-sm-12 col-xs-12 footer-left_block">
                 <p><a href="mailto:contact@cyberhand.ru">contact@cyberhand.ru</a></p>
                 <p><a href="tel:+79999027464">+7 (999) 902-74-64</a></p>
                 <p>© CyberHand Web Studio 2020</p>
             </div>
-            <div class="col-lg-6 col-sm-6 col-xs-12  social_link ">
+            <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12  social_link ">
                 <p>Cyber Hand</p>
+                <div class="soc_item-list">
                 <ul>
                     <li><a href="#">Tg</a></li>
                     <li><a href="#">Vk</a></li>
                     <li><a href="#">In</a></li>
                     <li><a href="#">Fb</a></li>
                 </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -124,7 +126,7 @@ list-style: none;
      li a {
 
        padding: 65%;
-        font-size: 25px;
+       
         color: rgba(255, 255, 255, 0);
      }
 

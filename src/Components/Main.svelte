@@ -307,7 +307,7 @@ function dealWithScrolling(e) {
     .ar__button{
             font-family: $opensans;
             // font-size: 36px;
-            font-size: $fontBigP;
+            font-size: 36px;
             color: $colorWhite;
             font-weight: bold;
 
