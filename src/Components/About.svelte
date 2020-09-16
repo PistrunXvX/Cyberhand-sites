@@ -51,7 +51,7 @@
 
                             <img src="/img/card.jpg" alt="" class="img-fluid">
                         </div>
-
+                        <a href=""></a>
                         <div class="card__item_text">
                             <h3>Шершнёв Артём</h3>
                             <p>Веб - дизайнер.</p>
@@ -69,8 +69,8 @@
                         </div>
 
                         <div class="card__item_text">
-                            <h3>Шершнёв Артём</h3>
-                            <p>Веб - дизайнер.</p>
+                            <h3>Евгений Горячкин</h3>
+                            <p>Фронтенд - разработчик.</p>
                         </div>
                     </div>
 
@@ -89,8 +89,8 @@
                             </div>
 
                             <div class="card__item_text">
-                                <h3>Шершнёв Артём</h3>
-                                <p>Веб - дизайнер.</p>
+                                <h3>Лебедев Александр</h3>
+                                <p>Фронтенд - разработчик.</p>
                             </div>
                         </div>
 
@@ -105,8 +105,8 @@
                             </div>
 
                             <div class="card__item_text">
-                                <h3>Шершнёв Артём</h3>
-                                <p>Веб - дизайнер.</p>
+                                <h3>Валерия Княгинина</h3>
+                                <p>SMM - специалист.</p>
                             </div>
                         </div>
 
@@ -127,10 +127,8 @@
 
 
 
-
     .first__container {
         padding-top: 10%;
-
 
         
         
@@ -193,8 +191,53 @@
         
     }
 
+
+    .card__item{
+        padding-bottom: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
 }
-          
+
+ //animation
+
+ .card__item{
+        transition:all 0.3s ease-out;
+    }
+
+    .card__item:after{
+        display: block;
+     content: "";
+     width: 0%;
+     height: 11px;
+     background-color:$dark-orange ;
+     transition: width .3s ease-in-out;
+    }
+
+    .card__item:hover:after,
+    .card__item:focus:after{
+        transition: width .3s ease-in-out;
+        width: 100%;
+    }
+
+    .card__item:hover{
+        transition:all 0.3s ease-out;
+        box-shadow: 10px  10px 24px black;
+        color:#b5026d;
+        
+    }
+
+    
+
+
+    
+
+
+   
     
 
 
