@@ -70,7 +70,7 @@ function dealWithScrolling(e) {
 <main>
     <section class="container first__container">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-sm-8">
                 <div class="main_text">
                    
                     <h1>Cyber Hand</h1>
@@ -146,7 +146,7 @@ function dealWithScrolling(e) {
                             С помощью маркеров вы получите возможность по новому взглянуть на способ взаимодействия с вашей информацией
                         </p>
                         <div class="button_ar">
-                            <button type="button" class="btn ar__button">Попробуйте Ar</button>
+                            <a href="#" class="btn ar__button">Попробуйте Ar</a>
                         </div>
                     </section>
                 </section>

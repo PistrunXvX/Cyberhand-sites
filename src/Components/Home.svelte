@@ -59,6 +59,8 @@
 
 
 <style lang="scss">
+	@import 'style/resize.scss';
+
 	.animation_block {
 		background-color: #1D002B;
 	}
