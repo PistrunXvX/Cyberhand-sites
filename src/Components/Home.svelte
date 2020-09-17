@@ -8,7 +8,7 @@
     setTimeout(() => condition = true);
 </script>
 
-<div class="container-fluid animation_block">
+<div class="animation_block">
 	<div class="purple_line">
 		<svg>
 			{#if condition}

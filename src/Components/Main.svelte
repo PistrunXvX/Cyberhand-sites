@@ -70,7 +70,7 @@ function dealWithScrolling(e) {
 <main>
     <section class="container first__container">
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col">
                 <div class="main_text">
                    
                     <h1>Cyber Hand</h1>
@@ -83,9 +83,9 @@ function dealWithScrolling(e) {
                     <button type="button" class="btn first__button">Свяжитесь с нами</button>
                 </div>
             </div>
-            <div class="col-lg-4 video_block">
+            <!-- <div class="col-lg-4 video_block">
                 <video src="#"></video>
-            </div>
+            </div> -->
         </div>
     </section>
     <section class="container second__container" id="animation__container" on:mousemove={coordsCleint} {style}>
