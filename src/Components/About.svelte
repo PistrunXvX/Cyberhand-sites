@@ -130,7 +130,10 @@
     .first__container {
         padding-top: 10%;
 
-        
+        background-image: url("/img/bubble.png");
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-size: 50%;
         
         h1 {
             text-transform: uppercase;
@@ -153,11 +156,14 @@
 
     .second__container {
         padding-bottom: 15%;
+
+        background-image: url("/img/bubble.png");
+        background-position: bottom left;
+        background-repeat: no-repeat;
+        background-size: 30%;
+
         .card__item_text{
             padding-top: 2%;
-            
-        
-
         }
 
         .second__title {

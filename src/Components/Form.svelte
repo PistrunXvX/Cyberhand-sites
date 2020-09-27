@@ -1,28 +1,28 @@
 
 <div class="container-fluid">
-<div class="container four__container">
-    <div class="row">
-        <div class="col-lg-6 col-sm-12 col-xs-12 ">
-            <div class="form_text">
-                <h2>Свяжитесь<br> с нами</h2>
-                <p>
-                    Мы дадим вам обратную связь в течении дня
-                </p>
+    <div class="container four__container">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12 col-xs-12 ">
+                <div class="form_text">
+                    <h2>Свяжитесь<br> с нами</h2>
+                    <p>
+                        Мы дадим вам обратную связь в течении дня
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12m col-xs-12">
+                <div class="form">
+                <form action="#" class="form_input">
+                    <input type="text" class="form-control" placeholder="Ваше имя" require>
+                    <input type="email" class="form-control" placeholder="Ваш email" require>
+                    <div class="text-center">
+                    <button class="btn form__btn" type="submit">Отправить</button>
+                    </div>
+                </form>
+            </div>
             </div>
         </div>
-        <div class="col-lg-6 col-sm-12m col-xs-12">
-            <div class="form">
-            <form action="#" class="form_input">
-                <input type="text" class="form-control" placeholder="Ваше имя" require>
-                <input type="email" class="form-control" placeholder="Ваш email" require>
-                <div class="text-center">
-                <button class="btn form__btn" type="submit">Отправить</button>
-                </div>
-            </form>
-        </div>
-        </div>
     </div>
-</div>
 </div>
 <style lang="scss">
  @import 'style/theme.scss';

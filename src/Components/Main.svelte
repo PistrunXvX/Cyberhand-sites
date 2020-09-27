@@ -70,7 +70,7 @@ function dealWithScrolling(e) {
 <main>
     <section class="container first__container">
         <div class="row">
-            <div class="col">
+            <div class="col-sm-8">
                 <div class="main_text">
                    
                     <h1>Cyber Hand</h1>
