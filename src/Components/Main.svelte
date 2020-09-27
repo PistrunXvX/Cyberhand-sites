@@ -80,7 +80,7 @@ function dealWithScrolling(e) {
                         Создаем интерфейсы аналитических систем, мобильные приложения и цифровые сервисы для государства и крупного бизнеса
                     </p>
                     </Typewriter>
-                    <a type="button" class="btn first__button">Свяжитесь с нами</a>
+                    <a href="" type="button" class="btn first__button">Свяжитесь с нами</a>
                 </div>
             </div>
             <!-- <div class="col-lg-4 video_block">
