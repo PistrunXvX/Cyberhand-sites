@@ -17,11 +17,15 @@
     font-size: $fontMdA !important;
   }
 
+  button{
+    font-size: $fontMdP !important; 
+  }
+
 .nav-item a{
 
   font-size: 18px;
 }
-   
+
   .first__container{
 display: flex !important;
 margin-bottom: 3% !important;
@@ -47,21 +51,21 @@ margin-bottom: 3% !important;
     .first__button{
       padding:2% 20% !important;
       text-align: center !important;
-     
+
     }
-  
+
 
     .second__container{
 
       .about_text{
         text-align: center !important;
       }
-     
+
       h2{
         margin-bottom: 80% !important;
         line-height: 1.5 !important;
-        
-        
+
+
       }
 
     }
@@ -74,13 +78,13 @@ margin-bottom: 3% !important;
         margin-bottom: 10% !important;
       }
     }
-   
+
  .form__btn{
-  
+
    padding: 10% 15% !important;
    font-size: 22px !important;
 
-  
+
  }
  .four__container{
    display: flex !important;
@@ -94,8 +98,8 @@ margin-bottom: 3% !important;
    padding: 3% 10% !important;
    font-size: 18px !important;
  }
- 
-  
+
+
 }
 .ar_block_1{
   h3{
@@ -105,7 +109,7 @@ margin-bottom: 3% !important;
   .ar__button{
     font-size: 36px !important;
   }
- 
+
 }
 .ar_block_2{
   h3{
@@ -147,6 +151,10 @@ margin-bottom: 3% !important;
   }
 
   a{
+    font-size: $fontSmP !important;
+  }
+
+  button{
     font-size: $fontSmP !important;
   }
 
@@ -203,56 +211,56 @@ margin-bottom: 3% !important;
       font-size: 20px !important;
     }
   }
- 
+
   .footer_container{
 
 
 
     .footer-left_block{
-      
+
       display: flex !important;
       justify-content: start !important;
       text-align: left !important;
       flex-direction: column !important;
-      
+
       a{
         font-size: 23px !important;
       }
 
-      
+
 
       p:last-child{
         text-align: center !important;
         font-size: 12px !important;
-        
+
         margin-top: 3% !important;
       }
 
 
     }
-    
+
     .social_link{
 
       display: flex !important;
       text-align: right !important;
-    
+
       margin: 0 !important;
       padding-bottom: 5% !important;
       display: flex !important;
       flex-direction: column !important;
       justify-content: center!important;
       text-align: center !important;
-    
+
     }
 
     p{
-      
+
       font-size: 0px !important;
     }
 
-    
 
-     
+
+
      li a{
       padding: 88% !important;
     }
@@ -267,7 +275,7 @@ margin-bottom: 3% !important;
 
     //  li:not(:last-child) {
     //    padding-right: 100% !important;
-       
+
     //  }
 
      .soc_item-list{
@@ -290,7 +298,7 @@ margin-bottom: 3% !important;
 
 .social_link{
   p{
-    
+
     padding-right: 5% !important;
     font-size: 40px !important;
     padding-bottom: 5%;
@@ -311,11 +319,6 @@ li{
   }
 
 }
-
-// .soc_item-list{
-//   padding-right: 25% ;
-// }
-
 
 .footer-left_block{
   a{
@@ -343,32 +346,32 @@ li{
 }
 
   .social_link{
-   
+
     p{
-      
+
       padding-bottom: 5% !important;
       font-size: 50px !important;
     }
 
     li{
       padding-right: 10% !important;
-      
+
     }
 
     li:First-child{
-     
-      
+
+
     }
     li a{
       padding: 88% !important;
     }
-  
-  
+
+
     li:nth-of-type(3) a{
       padding: 120% !important;
-  
+
     }
-  
+
   }
 
 
